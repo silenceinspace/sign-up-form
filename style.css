@@ -1,4 +1,4 @@
-/* @font-face {
+@font-face {
     font-family: 'norse';
     src: url(./fonts/Norse-Bold.otf);
 }
@@ -16,13 +16,12 @@ body{
 #container{
     display: grid;
 
-    grid-template-columns: 300px 1fr;
+    grid-template-columns: 400px 1fr;
     grid-template-rows: 100vh;
 }
 
 .full-picture img{
-    width:300px;
-    height:700px;
+    width:400px;
 }
 
 .text-side>div{
@@ -31,4 +30,54 @@ body{
 
 form{
     background-color: white;
-} */
+}
+
+.logo{
+    background-color: rgba(0, 0, 0, 0.5);
+    width:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0;
+
+    position: absolute;
+    top:200px;
+}
+
+.logo span{
+    color:white;
+    font-family: norse, sans-serif;
+    font-size:5rem;
+}
+
+.image-side{
+    position: relative;
+}
+
+.photo-credit a,
+.photo-credit p{
+    color:white;
+}
+
+.photo-credit{
+    width:100%;
+    position: absolute;
+    bottom:10px;
+
+    text-align: center;
+}
+
+/* right side */
+
+.title{
+    padding: 80px 50px 30px 20px;
+}
+
+.create-account{
+    padding: 20px 0 100px 20px;
+}
+
+.forms{
+    padding:70px 0;
+    
+}
