@@ -11,25 +11,22 @@
 
 body{
     min-height: 100vh;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 #container{
     display: grid;
-
-    grid-template-columns: 400px 1fr;
-    grid-template-rows: 100vh;
+    grid-template-columns: 400px auto;
 }
 
-.full-picture img{
+/* left side */
+.full-picture {
     width:400px;
 }
 
-.text-side>div{
-    background-color: grey;
-}
-
-form{
-    background-color: white;
+.full-picture > img {
+    width:100%;
+    display:block; /*remove white space under an image*/
 }
 
 .logo{
@@ -69,15 +66,66 @@ form{
 
 /* right side */
 
-.title{
-    padding: 80px 50px 30px 20px;
+.text-side>:nth-child(odd){
+    background-color: rgb(228, 220, 220);
 }
 
-.create-account{
-    padding: 20px 0 100px 20px;
+.title{
+    padding: 60px 30px 20px 0; 
+
+    font-size:1.2rem;
+    font-weight: bold;
 }
 
 .forms{
-    padding:70px 0;
+    padding:10px 100px;
+}
+
+.title,
+.create-account,
+.forms {
+    padding-left:30px;
+    height:33.3vh;
+}
+
+
+
+capture{
+    font-weight: bold;
+    font-size:1.5rem;
+}
+
+ul{
+    display: grid;
+    grid-template-columns: 250px 250px;
+    column-gap: 30px;
     
+    margin-top: 10px;
+}
+
+li {
+    display:flex;
+    flex-flow: wrap column;
+}
+
+li>input {
+    width: 200px;
+    line-height: 20px;
+    margin-bottom: 10px;
+}
+
+li>label{
+    font-size: 0.8rem;
+    opacity: 0.8;
+}
+
+.create-account button{
+    margin:20px 0;
+    width: 150px;
+    height:40px;
+    border-radius: 10px;
+    border:none;
+    background-color: #596D48;
+    color:white;
+    text-align: center;
 }
