@@ -118,6 +118,27 @@ li {
     flex-flow: wrap column;
 }
 
+input+span{
+    position: relative;
+}
+
+input+span::before{
+    position: absolute;
+    top: -35px;
+    left: 205px;
+
+} 
+
+input:valid+span::before{
+    color:green;
+    content: "✓";
+}
+
+input:invalid+span::before{
+    content: "✖";
+    color: red;
+}
+
 li>input {
     width: 200px;
     line-height: 20px;
@@ -150,10 +171,6 @@ li>label{
 input[class="error"]{
     border:2px solid red;
 }
-
-/* input[class="validated"]{
-    border:2px solid green;
-} */
 
 .create-account button{
     margin:20px 0;

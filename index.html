@@ -40,37 +40,54 @@
                     <capture>Let's do this!</capture>
                     <ul>
                         <li>
-                           <label for="first-name">FIRST NAME</label>
-                           <input type="text" id="first-name" name="first-name">
+                           <label for="first-name">FIRST NAME<span><strong> *</strong></span></label>
+                           <input type="text" id="first-name"
+                           name="first-name"
+                           placeholder="Upper/lower case letters"
+                           required>
+                           <span></span>
                         </li>
                         <li>
-                            <label for="last-name">LAST NAME</label>
-                            <input type="text" name="last-name" id="last-name">
+                            <label for="last-name">LAST NAME<span><strong> *</strong></span></label>
+                            <input type="text" name="last-name"
+                            id="last-name"
+                            placeholder="Upper/lower case letters"
+                            required>
+                            <span></span>
                         </li>
                         <li>
-                            <label for="email">EMAIL</label>
-                            <input type="email" name="email" id="email">
+                            <label for="email">EMAIL<span><strong> *</strong></span></label>
+                            <input type="email"
+                            name="email"
+                            id="email"
+                            placeholder="example@gmail.com"
+                            required>
+                            <span></span>
                         </li>
                         <li>
-                            <label for="number">PHONE NUMBER</label>
-                            <input type="number" name="number" id="number">
+                            <label for="number">PHONE NUMBER<span><strong> *</strong></span></label>
+                            <input type="number" name="number"
+                            id="number"
+                            placeholder="111-111-1111"
+                            required>
+                            <span></span>
                         </li>
                         <li>
-                            <label for="password">PASSWORD</label>
+                            <label for="password">PASSWORD<span><strong> *</strong></span></label>
                             <input class="error" 
                             type="password" 
                             name="password"
                             id="password"
-                            pattern="[A-Za-z0-9_.-]+"
                             required>
+                            <span></span>
                         </li>
                         <li>
-                            <label for="confirm-password">CONFIRM PASSWORD</label>
+                            <label for="confirm-password">CONFIRM PASSWORD<span><strong> *</strong></span></label>
                             <input class="error"
                             type="password"
                             name="confirm-password" id="confirm-password"
-                            pattern="[A-Za-z0-9_.-]+"
                             required>
+                            <span></span>
                         </li>
                     </ul>
                 </form>
@@ -102,6 +119,9 @@
 
 
 <!-- 
-    1. style inputs + validations (possibly even with Js)
-    2. make proper layout + resizing (somewhat okay responsiveness for mobile)
- -->
+    1. validations for password (use JS)
+    2. set specific patters for inputs and mention them
+    3. optimize code = less code
+    4. ask a question about too big pictures
+    5.  
+-->
