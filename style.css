@@ -56,6 +56,10 @@ body{
     color:white;
 }
 
+.photo-credit a:hover{
+    color:red;
+}
+
 .photo-credit{
     width:100%;
     position: absolute;
@@ -75,22 +79,26 @@ body{
 
     font-size:1.2rem;
     font-weight: bold;
-
 }
 
 .forms{
     padding:20px 100px;
 }
 
-.create-account{
-    box-shadow: 2px 0 5px blue; /*light shadow between form div and button div*/
-}
+/* .create-account{
+    box-shadow: 2px 0 5px blue;  */
+    /*light shadow between form div and button div*/
+/* } */
 
 .title,
 .create-account,
 .forms {
     padding-left:30px;
 }
+
+/* .text-side>*::selection{
+    background-color: #596D48;  ??
+} */
 
 capture{
     font-weight: bold;
@@ -124,6 +132,10 @@ li>input {
     font-size: 100%;
 }
 
+li>input:hover{
+    cursor:pointer;
+}
+
 li>input:focus{
     outline: none;
     border:2px solid blue;
@@ -154,6 +166,11 @@ input[class="error"]{
     text-align: center;
 }
 
+.create-account button:hover{
+    cursor: pointer;
+    background-color: #7db64b;
+}
+
 .create-account a {
     color:#596D48;
     text-decoration: none;
@@ -168,3 +185,66 @@ input[class="error"]{
     flex-direction: column;
 }
 
+@media(max-width:1100px) {
+    ul{
+        display: flex;
+        flex-flow: column wrap;
+
+        align-items: center;
+    }
+
+    capture{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .title,
+    .forms{
+        padding:30px;
+    }
+
+    .create-account {
+        padding: 20px;
+    }
+
+    .create-account button{
+        display: block;
+        margin: auto;
+    }
+
+    .create-account p {
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    .full-picture img{
+        height:780px;
+    }
+}
+
+@media(max-width:768px){
+    #container{
+        display:flex;
+        flex-direction: column;
+    }
+
+    .image-side {
+        width: 100%;
+        height:300px;
+    }
+
+    .full-picture img {
+        width: 100%;
+        height: 300px;
+    }
+
+    .logo{
+        position: absolute;
+        top: 100px;
+    }
+
+    .title{
+        text-align: center;
+    }
+}
