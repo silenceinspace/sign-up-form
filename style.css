@@ -69,9 +69,8 @@ body{
 }
 
 /* right side */
-
 .text-side div:nth-child(odd){
-    background-color: rgb(228, 220, 220);
+    background-color: rgb(235, 233, 233);
 }
 
 .title{
@@ -85,10 +84,20 @@ body{
     padding:20px 100px;
 }
 
-/* .create-account{
-    box-shadow: 2px 0 5px blue;  */
-    /*light shadow between form div and button div*/
-/* } */
+/* shadow between form div and create acc div */
+.create-account{
+    position: relative;
+}
+
+.create-account::before{
+    position: absolute;
+    top:0;
+    left:0;
+    content: "";
+    width:100%;
+    height: 1px;
+    box-shadow: 0px 0 10px rgba(0, 0, 0, 0.8);
+}
 
 .title,
 .create-account,
@@ -96,9 +105,11 @@ body{
     padding-left:30px;
 }
 
-/* .text-side>*::selection{
-    background-color: #596D48;  ??
-} */
+/*changes default blue-white color selection from the user*/
+::selection{
+    background-color: #596D48;
+    color:white;
+}
 
 capture{
     font-weight: bold;
@@ -126,18 +137,49 @@ input+span::before{
     position: absolute;
     top: -35px;
     left: 205px;
-
-} 
+}
 
 input:valid+span::before{
     color:green;
     content: "✓";
+    visibility: hidden;
 }
 
 input:invalid+span::before{
     content: "✖";
     color: red;
+    visibility: hidden;
 }
+
+input:focus+span::before{
+    visibility: visible;
+}
+
+li>input:valid{
+    border: green 2px solid;
+}
+
+/* 
+ul>li>input::after{
+    width:150px;
+    padding:3px 15px;
+    font-size: 1rem;
+    font-weight: bold;
+    background: #596D48;
+    color: white;
+    margin-left: 10px;
+
+    visibility: hidden;
+    opacity:0;
+    transition: opacity 1s ease-in-out;
+    content:"e.g. 'A";
+}
+
+ul>li>input:focus::after{
+    visibility: visible;
+    opacity: 1;
+} */
+
 
 li>input {
     width: 200px;

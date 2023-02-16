@@ -44,7 +44,8 @@
                            <input type="text" id="first-name"
                            name="first-name"
                            placeholder="Upper/lower case letters"
-                           required>
+                           required
+                           pattern="[A-Za-z-]+">
                            <span></span>
                         </li>
                         <li>
@@ -52,7 +53,8 @@
                             <input type="text" name="last-name"
                             id="last-name"
                             placeholder="Upper/lower case letters"
-                            required>
+                            required
+                            pattern="[A-Za-z-]+">
                             <span></span>
                         </li>
                         <li>
@@ -61,15 +63,18 @@
                             name="email"
                             id="email"
                             placeholder="example@gmail.com"
-                            required>
+                            required
+                            pattern="([A-Za-z0-9_.-]+)@([a-z]+)\.([a-z]{2,3})">
                             <span></span>
                         </li>
                         <li>
                             <label for="number">PHONE NUMBER<span><strong> *</strong></span></label>
-                            <input type="number" name="number"
+                            <input type="tel" name="number"
                             id="number"
-                            placeholder="111-111-1111"
-                            required>
+                            placeholder="420-111-111-111"
+                            maxlength="15"
+                            required
+                            pattern="([0-9]{3})[\s-]?([0-9]{3})[\s-]?([0-9]{3})[\s-]?([0-9]{3})">
                             <span></span>
                         </li>
                         <li>
@@ -78,7 +83,10 @@
                             type="password" 
                             name="password"
                             id="password"
-                            required>
+                            minlength="8"
+                            maxlength="20"
+                            required
+                            pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$">
                             <span></span>
                         </li>
                         <li>
@@ -86,7 +94,10 @@
                             <input class="error"
                             type="password"
                             name="confirm-password" id="confirm-password"
-                            required>
+                            minlength="8"
+                            maxlength="20"
+                            required
+                            pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$">
                             <span></span>
                         </li>
                     </ul>
@@ -120,8 +131,10 @@
 
 <!-- 
     1. validations for password (use JS)
-    2. set specific patters for inputs and mention them
-    3. optimize code = less code
-    4. ask a question about too big pictures
-    5.  
+    
+    2. for javascript feature use a new branch and later merge changes into the current one
+
+    3. set specific patters for inputs and mention them 
+
+    4. optimize code = less code
 -->
