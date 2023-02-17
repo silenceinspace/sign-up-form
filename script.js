@@ -1,30 +1,31 @@
-const form = document.querySelector("form");
 const password = document.querySelector("#password");
-const passwordError = document.querySelector
-('#password + span');
+password.addEventListener("input", validate);
 
-password.addEventListener('input', (e) => {
-    if (password.validity.valid) {
+function validate() {
+
+    const re = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/;
+    if (re.test(password.value)){
         passwordError.textContent = "";
+        passwordError.classList.remove("password-error");
+        return true;
     } else {
         showError();
+        return false;
     }
-});
+};
 
-form.addEventListener("submit", (e) => {
-    if (!password.validity.valid) {
-        showError();
-        event.preventDefault();
-    }
-});
-
+const passwordError = document.querySelector('#password + span');
 function showError() {
     if (password.validity.valueMissing) {
         passwordError.textContent = "You need to enter a password.";
-    } else if (password.validity.patternMismatch) {
-        passwordError.textContent = "Entered value needs to be of the proper format.";
-    } else if (password.validity.tooShort) {
-        passwordError.textContent = `Email should be at least ${password.minlength} characters; you entered ${password.value.length}.`;
+    } else if (password.value.search(/[A-Z]/) === -1) {
+        passwordError.textContent = "You're missing an upper case";
+    } else if (password.value.search(/[a-z]/) === -1) {
+        passwordError.textContent = "You're missing a lower case";
+    } else if (password.value.search(/\d/) === -1) {
+        passwordError.textContent = "You're missing a digit";
+    } else if (password.value.length < 8 ) {
+        passwordError.textContent = "Password has to be 8-20 characters"
     }
-}
-
+    passwordError.classList.add("password-error");
+};

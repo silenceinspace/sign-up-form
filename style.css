@@ -212,7 +212,12 @@ input[type="tel"]:invalid+span::after{
     content:"420-111-111-111";
 }
 
-
+/* display a custom error message for validations*/
+.password-error {
+    width:200px;
+    color:red;
+    margin-bottom: 5px;
+}
 
 /* shadow between form div and create acc div */
 .create-account{
