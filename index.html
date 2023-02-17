@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign-up page</title>
     <link rel="stylesheet" href="style.css">
+    <script src="./script.js" defer></script>
 </head>
 
 <body>
@@ -40,35 +41,41 @@
                     <capture>Let's do this!</capture>
                     <ul>
                         <li>
-                           <label for="first-name">FIRST NAME<span><strong> *</strong></span></label>
+                           <label for="first-name">FIRST NAME<span><strong> * (2-20 characters)</strong></span></label>
                            <input type="text" id="first-name"
                            name="first-name"
                            placeholder="Upper/lower case letters"
                            required
+                           minlength="2"
+                           maxlength="20"
                            pattern="[A-Za-z-]+">
                            <span></span>
                         </li>
                         <li>
-                            <label for="last-name">LAST NAME<span><strong> *</strong></span></label>
+                            <label for="last-name">LAST NAME<span><strong> * (2-20 characters)</strong></span></label>
                             <input type="text" name="last-name"
                             id="last-name"
                             placeholder="Upper/lower case letters"
                             required
+                            minlength="2"
+                            maxlength="20"
                             pattern="[A-Za-z-]+">
                             <span></span>
                         </li>
                         <li>
-                            <label for="email">EMAIL<span><strong> *</strong></span></label>
+                            <label for="email">EMAIL<span><strong> * (7-20 characters)</strong></span></label>
                             <input type="email"
                             name="email"
                             id="email"
                             placeholder="example@gmail.com"
                             required
+                            min="7"
+                            maxlength="20"
                             pattern="([A-Za-z0-9_.-]+)@([a-z]+)\.([a-z]{2,3})">
                             <span></span>
                         </li>
                         <li>
-                            <label for="number">PHONE NUMBER<span><strong> *</strong></span></label>
+                            <label for="number">PHONE NUMBER<span><strong> * (15 characters)</strong></span></label>
                             <input type="tel" name="number"
                             id="number"
                             placeholder="420-111-111-111"
@@ -78,7 +85,7 @@
                             <span></span>
                         </li>
                         <li>
-                            <label for="password">PASSWORD<span><strong> *</strong></span></label>
+                            <label for="password">PASSWORD<span><strong> * (8-20 characters)</strong></span></label>
                             <input class="error" 
                             type="password" 
                             name="password"
@@ -110,21 +117,6 @@
             </div>
         </div>
     </div>
-
-    <script>
-        
-        // const password = document.querySelector("#password").value;
-        // const validatePassword = document.querySelector("#confirm-password").value;
-
-        // function validatePwd(){
-
-        // if (password != validatePassword) {
-        //     console.log('Wrong');
-        // } else {
-        //     console.log('It works');
-        // }}
-
-    </script>
 </body>
 </html>
 
