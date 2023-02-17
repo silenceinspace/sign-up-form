@@ -145,9 +145,6 @@ li>label{
     opacity: 0.8;
 }
 
-input[class="error"]{
-    border:2px solid red;
-}
 
 /* signs on the right i.e. 'X' or 'V'*/
 input+span{
@@ -180,10 +177,14 @@ li>input:valid{
     border: green 2px solid;
 }
 
+input[class="error"]{
+    border:2px solid red;
+}
+
 /* informing the user what a format of the input is */
 input+span::after{
     position:absolute;
-    top:-65px;
+    top:-10px;
 }
 
 input:invalid+span::after{
@@ -194,6 +195,7 @@ input:invalid+span::after{
     background: #596D48;
     color: white;
     visibility: hidden;
+    z-index: 3;
 }
 
 input:invalid:focus+span::after{

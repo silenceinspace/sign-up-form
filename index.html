@@ -63,19 +63,19 @@
                             <span></span>
                         </li>
                         <li>
-                            <label for="email">EMAIL<span><strong> * (7-20 characters)</strong></span></label>
+                            <label for="email">EMAIL<span><strong> * (7-28 characters)</strong></span></label>
                             <input type="email"
                             name="email"
                             id="email"
                             placeholder="example@gmail.com"
                             required
                             min="7"
-                            maxlength="20"
+                            maxlength="28"
                             pattern="([A-Za-z0-9_.-]+)@([a-z]+)\.([a-z]{2,3})">
                             <span></span>
                         </li>
                         <li>
-                            <label for="number">PHONE NUMBER<span><strong> * (15 characters)</strong></span></label>
+                            <label for="number">PHONE NUMBER<span><strong> * (12 digits)</strong></span></label>
                             <input type="tel" name="number"
                             id="number"
                             placeholder="420-111-111-111"
@@ -121,9 +121,7 @@
 
 
 <!-- 
-    1. validations for password + match both inputs (use JS)
-    
-    2. for javascript feature use a new branch and later merge changes into the current one
+    1. add custom Validations when inputs don't meet some requirements
 
-    3. optimize code = less code
+    2. optimize code = less code
 -->
