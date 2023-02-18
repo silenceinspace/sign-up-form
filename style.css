@@ -181,39 +181,6 @@ input[class="error"]{
     border:2px solid red;
 }
 
-/* informing the user what a format of the input is */
-input+span::after{
-    position:absolute;
-    top:-10px;
-}
-
-input:invalid+span::after{
-    width:170px;
-    padding:3px 15px;
-    font-size: 1rem;
-    font-weight: bold;
-    background: #596D48;
-    color: white;
-    visibility: hidden;
-    z-index: 3;
-}
-
-input:invalid:focus+span::after{
-    visibility: visible;
-}
-
-input[type="text"]:invalid+span::after{
-    content:"Upper/lower case letters";
-}
-
-input[type="email"]:invalid+span::after{
-    content:"example@gmail.com";
-}
-
-input[type="tel"]:invalid+span::after{
-    content:"420-111-111-111";
-}
-
 /* display a custom error message for validations*/
 .password-error {
     width:200px;
