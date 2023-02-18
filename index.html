@@ -44,7 +44,7 @@
                            <label for="first-name">FIRST NAME<span><strong> * (2-20 characters)</strong></span></label>
                            <input type="text" id="first-name"
                            name="first-name"
-                           placeholder="Upper/lower case letters"
+                           placeholder="Upper/lowercase letters"
                            required
                            minlength="2"
                            maxlength="20"
@@ -55,7 +55,7 @@
                             <label for="last-name">LAST NAME<span><strong> * (2-20 characters)</strong></span></label>
                             <input type="text" name="last-name"
                             id="last-name"
-                            placeholder="Upper/lower case letters"
+                            placeholder="Upper/lowercase letters"
                             required
                             minlength="2"
                             maxlength="20"
@@ -90,10 +90,9 @@
                             type="password" 
                             name="password"
                             id="password"
-                            minlength="8"
-                            maxlength="20"
                             required
-                            pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$">
+                            pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[A-Za-z\d]{8,}$"
+                            title="Format: at least 1 uppercase and lowercase letters and at least 1 digit. No special characters.">
                             <span></span>
                         </li>
                         <li>
@@ -121,7 +120,5 @@
 
 
 <!-- 
-    1. add custom Validations when inputs don't meet some requirements
-
     2. optimize code = less code
 -->

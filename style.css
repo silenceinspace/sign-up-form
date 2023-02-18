@@ -71,7 +71,6 @@ body{
     color:red;
 }
 
-
 /* right side */
 .text-side{
     display: flex;
@@ -145,8 +144,7 @@ li>label{
     opacity: 0.8;
 }
 
-
-/* signs on the right i.e. 'X' or 'V'*/
+/* signs on the right for valid/invalid inputs*/
 input+span{
     position: relative;
 }
