@@ -37,17 +37,14 @@ const confirmPassword = document.querySelector('#confirm-password');
 confirmPassword.addEventListener('input', checkPasswords);
 
 function checkPasswords(){
-    if (password.value !== confirmPassword.value) {
+    if (password.value === confirmPassword.value && password.validity.valid === true) {
+        passwordError.textContent = "";
+        passwordError.classList.remove("password-error");  
+        confirmPassword.setCustomValidity("");
+    } else {
         passwordError.classList.add("password-error");
         passwordError.textContent = "Passwords do not match.";
-
         confirmPassword.setCustomValidity("Password has to stay the same!");
-
-    } else {
-        passwordError.textContent = "";
-        passwordError.classList.remove("password-error");
-
-        confirmPassword.setCustomValidity("");
     }
 };
 
