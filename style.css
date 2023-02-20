@@ -113,6 +113,8 @@ ul{
 li {
     display:flex;
     flex-flow: wrap column;
+
+    position: relative; 
 }
 
 li>input {
@@ -184,6 +186,24 @@ input[class="error"]{
     width:200px;
     color:red;
     margin-bottom: 5px;
+}
+
+/* toggle visibility of password */
+[type="checkbox"] {
+    width:30px;
+    height: 30px;
+    appearance: none;
+}
+
+label+span{
+    position: absolute;
+    top:14px;
+    left: 167px;
+
+    background-image: url(./images/icons8-eye-32.png);
+    background-position: center;
+    width:30px;
+    height:30px;
 }
 
 /* shadow between form div and create acc div */

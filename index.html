@@ -87,17 +87,19 @@
                         </li>
                         <li>
                             <label for="password">PASSWORD<span><strong> * (8-20 characters)</strong></span></label>
+                            <span><input class="checkbox-1" type="checkbox"></span>
                             <input class="error" 
                             type="password" 
                             name="password"
                             id="password"
+                            maxlength="20"
                             required
-                            pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[A-Za-z\d]{8,}$"
                             title="Format: at least 1 uppercase and lowercase letters and at least 1 digit. No special characters.">
                             <span></span>
                         </li>
                         <li>
                             <label for="confirm-password">CONFIRM PASSWORD<span><strong> *</strong></span></label>
+                            <span><input type="checkbox" class="checkbox-2"></span>
                             <input class="error"
                             type="password"
                             name="confirm-password" id="confirm-password"

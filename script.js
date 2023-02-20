@@ -7,8 +7,10 @@ function validate() {
     if (re.test(password.value)){
         passwordError.textContent = "";
         passwordError.classList.remove("password-error");
+        password.setCustomValidity('');
         return true;
     } else {
+        password.setCustomValidity('Follow the proper format.');
         showError();
         return false;
     }
@@ -136,4 +138,26 @@ function showPhoneNumberError() {
         phoneNumberSpan.textContent = "You need to enter a number.";
     }
     phoneNumberSpan.classList.add('password-error');
+};
+
+// toggle visibility of password
+const checkBoxOne = document.querySelector('.checkbox-1');
+checkBoxOne.addEventListener('click', showPassword);
+
+function showPassword() {
+    if (password.type === 'password') {
+        password.type = 'text';
+    } else {
+        password.type = 'password';
+    }
+};
+
+const checkBoxTwo = document.querySelector('.checkbox-2');
+checkBoxTwo.addEventListener('click', showConfirmation);
+function showConfirmation() {
+    if (confirmPassword.type === 'password') {
+        confirmPassword.type = 'text';
+    } else {
+        confirmPassword.type = 'password';
+    }
 };
