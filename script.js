@@ -142,22 +142,32 @@ function showPhoneNumberError() {
 
 // toggle visibility of password
 const checkBoxOne = document.querySelector('.checkbox-1');
+const svgLine = document.querySelector('.svg');
 checkBoxOne.addEventListener('click', showPassword);
+svgLine.addEventListener('click', showPassword);
 
 function showPassword() {
     if (password.type === 'password') {
         password.type = 'text';
+        svgLine.style.display = 'none';
     } else {
         password.type = 'password';
+        svgLine.style.display = 'block';
+        
     }
 };
 
 const checkBoxTwo = document.querySelector('.checkbox-2');
+const svgLineTwo = document.querySelector('.svg-2');
 checkBoxTwo.addEventListener('click', showConfirmation);
+svgLineTwo.addEventListener('click', showConfirmation);
+
 function showConfirmation() {
     if (confirmPassword.type === 'password') {
         confirmPassword.type = 'text';
+        svgLineTwo.style.display = "none";
     } else {
         confirmPassword.type = 'password';
+        svgLineTwo.style.display = 'block';
     }
 };

@@ -206,6 +206,13 @@ label+span{
     height:30px;
 }
 
+/* a line crossing the eye */
+.svg, .svg-2{
+    position: absolute;
+    top:2px;
+    left:4px;
+}
+
 /* shadow between form div and create acc div */
 .create-account{
     position: relative;
