@@ -3,7 +3,7 @@ const password = document.querySelector("#password");
 password.addEventListener("input", validate);
 
 function validate() {
-    const re = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[A-Za-z\d]{8,20}$/;
+    const re = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[A-Za-z\d!?@_.,=+-]{8,20}$/;
     if (re.test(password.value)){
         passwordError.textContent = "";
         passwordError.classList.remove("password-error");
@@ -28,8 +28,6 @@ function showError() {
         passwordError.textContent = "You're missing a digit.";
     } else if (password.value.length < 8 ) {
         passwordError.textContent = "Password has to be 8-20 characters."
-    } else if (password.value.match(/[^A-Za-z\d]/)) {
-        passwordError.textContent = "No special characters are allowed. (@.,!#)"
     }
     passwordError.classList.add("password-error");
 };
